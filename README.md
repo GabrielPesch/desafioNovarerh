@@ -189,7 +189,7 @@ Execute a composição dos containers Docker
 Gere e alimente o banco de dados
 
   ```bash
-  npm run migrations
+  npm run migration
   npm run seed
 ```
     
