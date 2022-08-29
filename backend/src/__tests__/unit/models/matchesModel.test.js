@@ -10,7 +10,7 @@ describe('models/matchesModel', () => {
   beforeEach(sinon.restore);
 
   describe('list', ()  => {
-    it('Should thrown an Error if "db.execute" thrown an error', () => {
+    it('Should thrown an Error if "db.execute" is rejected', () => {
       sinon.stub(db, 'execute').rejects();
       return chai.expect(matchesModel.list()).to.eventually.be.rejected;
     });

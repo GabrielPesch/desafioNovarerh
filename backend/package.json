@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "mocha ./src/__tests__/unit/**/*.test.js --exit",
+    "integration": "mocha ./src/__tests__/integration/*.test.js --exit",
     "migration": "node -e \"require('./utils').runMigration()\"",
     "seed": "node -e \"require('./utils').runSeed()\"",
     "start": "node ./src/index.js",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
     "sinon": "^14.0.0"
