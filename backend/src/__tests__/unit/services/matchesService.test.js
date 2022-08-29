@@ -10,7 +10,7 @@ describe('services/matchesService', () => {
   beforeEach(sinon.restore);
 
   describe('list', () => {
-    it('Should thrown an Error if "matchesModel.list" thrown an error', () => {
+    it('Should thrown an Error if "matchesModel.list" is rejected', () => {
       sinon.stub(matchesModel, 'list').rejects();
       return chai.expect(matchesService.list()).to.eventually.be.rejected;
     });

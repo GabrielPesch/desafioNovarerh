@@ -15,12 +15,12 @@ describe('controllers/matchesController', () => {
 
   describe('list', () => {
 
-    it('Deve disparar um erro se matchesService.list disparar um erro', () => {
+    it('Should thrown an Error if "matchesService.list" is rejects', () => {
       sinon.stub(matchesService, 'list').rejects();
       return chai.expect(matchesController.list({}, {})).to.eventually.be.rejected;
     });
 
-    it('Deve chamar o status 200', async () => {
+    it('Should return status 200', async () => {
       const res = makeRes();
       sinon.stub(matchesService, 'list').resolves(listMock);
 
@@ -28,7 +28,7 @@ describe('controllers/matchesController', () => {
       return chai.expect(res.status.getCall(0).args[0]).to.equal(200);
     });
 
-    it('Deve retornar a lista', async () => {
+    it('Should return a list', async () => {
       const res = makeRes();
       sinon.stub(matchesService, 'list').resolves(listMock);
 
