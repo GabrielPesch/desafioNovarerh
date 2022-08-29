@@ -4,7 +4,11 @@
   "description": "Desafio novareRH - Backend jr | hibrido - curitiba",
   "main": "main.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "mocha ./src/__tests__/unit/**/*.test.js --exit",
+    "migration": "node -e \"require('./utils').runMigration()\"",
+    "seed": "node -e \"require('./utils').runSeed()\"",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
