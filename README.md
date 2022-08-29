@@ -149,6 +149,24 @@ maior que 30 e a duração do jogo foi maior que 90 minutos.
 ```bash
   git clone git@github.com:GabrielPesch/desafioNovarerh.git
 ```
+          
+## Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+
+  `MYSQL_HOST`
+
+  `MYSQL_USER`
+
+  `MYSQL_PASSWORD`
+
+  `MYSQL_DATABASE`
+
+  `PORT`
+
+Caso opte por uma configuração padrão basta **renomear** o arquivo `dot.env.example` para `dot.env`
+  
+---          
  
   Entre na pasta do repositório referente ao backend
   
