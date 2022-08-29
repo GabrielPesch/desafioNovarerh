@@ -195,15 +195,16 @@ Gere e alimente o banco de dados
     
 Execute os testes unitários com
     
-      ```bash
+          
+   ```bash
   npm run test
 ```
 
+          
 Execute os testes de integração com: 
-    
-    Execute os testes unitários com
-    
-      ```bash
+   
+   
+  ```bash
   npm run integration
 ```
     
