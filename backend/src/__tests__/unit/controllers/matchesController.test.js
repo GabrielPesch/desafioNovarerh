@@ -4,7 +4,7 @@ const chaiAsPromised = require('chai-as-promised');
 
 const {makeRes, listMock} = require('./utils');
 const matchesService = require('../../../services/matchesService');
-const matchesControllers = require('../../../controllers/matchesControllers');
+const matchesController = require('../../../controllers/matchesController');
 
 chai.use(chaiAsPromised);
 
@@ -17,14 +17,14 @@ describe('controllers/matchesController', () => {
 
     it('Deve disparar um erro se matchesService.list disparar um erro', () => {
       sinon.stub(matchesService, 'list').rejects();
-      return chai.expect(matchesControllers.list({}, {})).to.eventually.be.rejected;
+      return chai.expect(matchesController.list({}, {})).to.eventually.be.rejected;
     });
 
     it('Deve chamar o status 200', async () => {
       const res = makeRes();
       sinon.stub(matchesService, 'list').resolves(listMock);
 
-      await matchesControllers.list({}, res);
+      await matchesController.list({}, res);
       return chai.expect(res.status.getCall(0).args[0]).to.equal(200);
     });
 
@@ -32,7 +32,7 @@ describe('controllers/matchesController', () => {
       const res = makeRes();
       sinon.stub(matchesService, 'list').resolves(listMock);
 
-      await matchesControllers.list({}, res);
+      await matchesController.list({}, res);
       return chai.expect(res.json.getCall(0).args[0]).to.deep.equal(listMock);
     });
   });
