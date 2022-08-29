@@ -1,0 +1,21 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "Desafio novareRH - Backend jr | hibrido - curitiba",
+  "main": "main.js",
+  "type":"module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielPesch/desafioNovarerh.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Pesch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielPesch/desafioNovarerh/issues"
+  },
+  "homepage": "https://github.com/GabrielPesch/desafioNovarerh#readme"
+}
